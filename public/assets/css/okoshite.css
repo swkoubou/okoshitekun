@@ -1,0 +1,37 @@
+body{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    border: solid thick black;
+    font-size: 4.5vh;
+}
+.Currenttime{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-bottom: solid thick black;
+    text-align: center;
+}
+h1{
+    font-size: 7vh;
+}
+.Sleep{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 16px;
+}
+.Sleep_list {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-left: solid thick black;
+}
+dt{
+    display: list-item;
+    list-style-type: "~";
+    margin-left: 35px;
+}
