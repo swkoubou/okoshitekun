@@ -34,14 +34,14 @@ class Controller_Welcome extends Controller
         /*中身
             $rows = [
                 "date" => "YYYY-mm-dd",
-                "one"  => "text",
-                "two"  => "text",
-                "three"  => "text",
-                "four"  => "text",
-                "five"  => "text",
+                "one"  => "varchar(100)",
+                "two"  => "varchar(100)",
+                "three"  => "varchar(100)",
+                "four"  => "varchar(100)",
+                "five"  => "varchar(100)",
             ]
         */
-        $data['rows'] = Model_Okoshite::find_one_by('date',Date::time()->format("%Y-%m-%d"));
+        $data['rows'] = Model_Okoshite::find_by_pk(Date::time()->format("%Y-%m-%d"));
         return View::forge('welcome/okoshitekun',$data);
 	}
 

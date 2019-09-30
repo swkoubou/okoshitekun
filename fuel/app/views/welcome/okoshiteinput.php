@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php
-        Form::open();
+        echo Form::open('welcome');
         echo '<select name="year">';
         $year = Date::time()->format("%Y");
         for($i = $year;$i < $year + 5;$i++)
@@ -33,7 +33,7 @@
         }
 
         echo '</select>';
-        Form::close();
+        echo Form::close();
     ?>
 </body>
 </html>
