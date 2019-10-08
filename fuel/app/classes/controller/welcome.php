@@ -46,7 +46,13 @@ class Controller_Welcome extends Controller
 	}
 
 	public function action_input(){
-	    return View::forge('welcome/okoshiteinput');
+	    $data = array();
+	    //宿泊メンバーで初期化
+	    $data['kouboumin'] = array('hoge','huga','hogehoge','hugehuge','foo','bar');
+	    //okoshiteinput.phpの入力を入れる
+	    $data['input'] = Input::post();
+	    return View::forge('welcome/okoshiteinput',$data);
+	    return View::forge('welcome/okoshitekun',$_POST);
     }
 
     public function action_dbsetup(){
@@ -61,7 +67,7 @@ class Controller_Welcome extends Controller
         catch(\Database_Exception $e)
         {
 
-            $data['dbstate'] = $e;
+            $data['dbstate'] = var_dump($e);
         }
 
         //Tableを用意する

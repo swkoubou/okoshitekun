@@ -22,7 +22,7 @@
 return array(
 	'default' => array(
 		'connection' => array(
-			'dsn'      => 'mysql:host=127.0.0.1;dbname=okoshiteDB',
+			'dsn'      => 'mysql:host=127.0.0.1;dbname=okoshiteDB',//
 			'username' => 'vagrant',
 			'password' => '0000',
 		),

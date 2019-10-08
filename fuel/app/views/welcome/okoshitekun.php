@@ -98,6 +98,8 @@
 </div>
 <div class="Sleep">
     <p id='sleep'>hogeさん</p>
+    <?php
+    ?>
 </div>
 <div class="Sleep_list">
     <dl class="Timetable">
