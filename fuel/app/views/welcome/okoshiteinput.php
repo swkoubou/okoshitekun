@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php
-        echo Form::open('welcome/dbinput');
+        echo Form::open('input/dbinput');
 
         //年のセレクトボックス
         echo '<select name="year">';
