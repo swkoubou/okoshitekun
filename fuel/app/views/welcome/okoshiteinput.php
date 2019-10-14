@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php
-        echo Form::open('welcome');
+        echo Form::open('welcome/dbinput');
 
         //年のセレクトボックス
         echo '<select name="year">';
@@ -36,14 +36,16 @@
         echo '</select>';
 
         //checkbox表示
-        for($i=1;$i<6;$i++)
+        $i = 1;
+        foreach($period as $periods)
         {
             echo "<p>~{$i}限目</p>";
+            $i++;
             foreach($kouboumin as $people)
             {
                 //id=name+period
-                echo Form::checkbox($people.$i);
-                echo Form::label($people,$people.$i).'  ';
+                echo Form::checkbox($people.$periods,$people);
+                echo Form::label($people,$people.$periods).'  ';
             }
         }
 

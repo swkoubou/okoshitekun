@@ -99,6 +99,13 @@
 <div class="Sleep">
     <p id='sleep'>hogeさん</p>
     <?php
+    if(!(empty($date))){
+        echo $date;
+        echo '<br>';
+        echo $one;
+        echo '<br>';
+        echo $two;
+    }
     ?>
 </div>
 <div class="Sleep_list">
